@@ -122,6 +122,14 @@ closureFunc("inside");
 
 ---
 
+### Accessing innerFunction via the Closure
+
+The only way to access and use innerFunction is by:
+
+1. Calling outerFunction, which returns innerFunction.
+2. Capturing the returned innerFunction into a variable (e.g., closureFunc).
+3. Calling that captured variable (closureFunc), which is now a reference to innerFunction.
+
 ### Why Doesn’t `closureFunc("inside")` Invoke `outerFunction`?
 
 1. **What Does `outerFunction` Return?**
