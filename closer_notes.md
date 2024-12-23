@@ -1,13 +1,13 @@
 # Closures
 
-functions inside of functions typically
+### A closure is a function that retains access to variables from its outer scope, even after the outer function has finished executing. Closures are often created when a function is defined inside another function and references variables from the parent function's scope.
 
 In JavaScript, when a function returns another function, you need to:
 
 - Capture the returned function (assign it to a variable or chain it directly).
 - Invoke the returned function to see the effect.
 
-depends on a variable outside of it's scope
+
 
 when you have a function defined inside another function, the inner function has access to variables and scope of the outer function, even if that function finishes executing
 
@@ -69,7 +69,7 @@ const closureFunc = outerFunction("outside");
 This line calls outerFunction() and passes the argument "outside".
 outerFunction() returns the innerFunction(), but it does not execute innerFunction() yet.
 
-## This does two things:
+### This does two things:
 
 1. Calls outerFunction("outside"):
    - This executes outerFunction with the argument "outside".
@@ -111,3 +111,6 @@ Let’s think of this step by step:
 
 This confusion is natural because it feels like closureFunc is somehow "linked" to outerFunction. But here’s the key distinction:
 After outerFunction is called and returns innerFunction, closureFunc is not linked to outerFunction anymore. It’s just pointing directly to innerFunction.
+
+
+
