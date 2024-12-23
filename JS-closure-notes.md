@@ -122,7 +122,9 @@ closureFunc("inside");
 
 ---
 
-### **_TL;DR_** closureFunc is the returned innerFunction, which remembers the outerFunction argument and takes a new argument for itself..
+### **_TL;DR_**
+
+### closureFunc is the returned innerFunction, which remembers the outerFunction argument and takes a new argument for itself..
 
 1. closureFunc is the returned innerFunction.
 2. It "remembers" the outerFunction argument (via the closure).
