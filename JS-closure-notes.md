@@ -13,6 +13,8 @@ When you have a function defined inside another function, the inner function has
 
 Each call to `outerFunction` creates its own scope and closure. The `innerFunction` retains access to the specific `outerVariable` from the scope where it was created.
 
+### Example of a Closure
+
 ```javascript
 function outerFunction(outerVariable) {
   console.log(outerVariable);
@@ -28,7 +30,7 @@ closureFunc("inside");
 
 ---
 
-## Total Breakdown of What’s Happening
+## Total Breakdown of What’s Happening in the Above Closure
 
 ### 1. Defining the Outer Function
 
@@ -78,6 +80,7 @@ console.log(`Inner Variable: ${innerVariable}`);
 - The second `console.log` shows the value of `innerVariable`, which is specific to `innerFunction()`.
 
 Together, these demonstrate how `innerFunction` can access:
+
 - Its own parameter (`innerVariable`).
 - The parameter of `outerFunction` (`outerVariable`) because of the closure.
 
@@ -90,6 +93,7 @@ const closureFunc = outerFunction("outside");
 ```
 
 - **What Happens Here**:
+
   - `outerFunction("outside")` is called with the argument `"outside"`.
   - Inside `outerFunction`:
     - `"outside"` is logged.
@@ -121,6 +125,7 @@ closureFunc("inside");
 ### Why Doesn’t `closureFunc("inside")` Invoke `outerFunction`?
 
 1. **What Does `outerFunction` Return?**
+
    - `outerFunction` doesn’t return itself—it returns `innerFunction`.
    - After returning, `outerFunction` is finished. It’s no longer involved.
 
@@ -136,6 +141,8 @@ This confusion is natural because it feels like `closureFunc` is somehow "linked
 
 - After `outerFunction` is called and returns `innerFunction`, `closureFunc` is not linked to `outerFunction` anymore.
 - It’s just pointing directly to `innerFunction`, which retains access to the variables in `outerFunction`’s scope (thanks to the closure).
+
 ```
 
 This will ensure that your content is fully delivered in Markdown format without interruption. Let me know if you need anything else! 😊
+```
