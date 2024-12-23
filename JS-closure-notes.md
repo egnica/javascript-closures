@@ -38,8 +38,6 @@ closureFunc("inside");
 2. It "remembers" the outerFunction argument (via the closure).
 3. It also accepts a new argument specifically for innerFunction.
 
-## ** Remember this at the end of the reading **
-
 ---
 
 ## Total Breakdown of What’s Happening in the Above Closure
