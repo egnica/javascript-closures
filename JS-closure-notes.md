@@ -157,8 +157,3 @@ This confusion is natural because it feels like `closureFunc` is somehow "linked
 
 - After `outerFunction` is called and returns `innerFunction`, `closureFunc` is not linked to `outerFunction` anymore.
 - It’s just pointing directly to `innerFunction`, which retains access to the variables in `outerFunction`’s scope (thanks to the closure).
-
-```
-
-This will ensure that your content is fully delivered in Markdown format without interruption. Let me know if you need anything else! 😊
-```
