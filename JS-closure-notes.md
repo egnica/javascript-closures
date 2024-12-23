@@ -32,7 +32,7 @@ closureFunc("inside");
 
 ### **_TL;DR_**
 
-### `closureFunc` is the returned `innerFunction()`, which remembers the outerFunction argument (in this case the string "outside") and takes a new argument for itself..(in this case ("inside"))
+### `closureFunc` is the returned `innerFunction()`, which remembers the outerFunction argument (in this case the string "outside") and takes a new argument for itself..(in this case ("inside")
 
 1. closureFunc is the returned innerFunction.
 2. It "remembers" the outerFunction argument (via the closure).
