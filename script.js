@@ -30,7 +30,27 @@ const divsWithClassTwo = document.querySelectorAll(".div-class-2");
 console.log(divsWithClassTwo);
 divsWithClassTwo.forEach((div) => (div.style.color = "purple"));
 
-const input = document.querySelector("[name-test]");
-console.log(input);
-
 // *******************************************************************//
+
+// Add event listener 'click'
+
+const btn = document.querySelector("[data-btn]");
+const input = document.querySelector("[data-input-text]");
+const printBrowser = document.querySelector("[write-input]");
+const printBrowserList = document.querySelector("[write-input-list]");
+let inputText = "";
+const inputArr = [];
+btn.addEventListener("click", (e) => {
+  inputText = input.value;
+  console.log(inputText);
+  inputArr.push(inputText);
+  printBrowser.innerHTML = inputText;
+  printBrowserList.innerHTML = inputArr;
+
+  console.log(inputArr);
+
+  input.value = "";
+});
+
+// ** This doesn't run updated variable log because it runs right when the page is loaded, and only that one time **  console.log(inputText);
+//btn.removeEventListener("click", printClick);
