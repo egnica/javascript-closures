@@ -54,3 +54,40 @@ btn.addEventListener("click", (e) => {
 
 // ** This doesn't run updated variable log because it runs right when the page is loaded, and only that one time **  console.log(inputText);
 //btn.removeEventListener("click", printClick);
+
+// *******************************************************************//
+
+let countTotal = 0;
+let btnOne = 0;
+let btnTwo = 0;
+let btnThree = 0;
+const btnsForCount = document.querySelectorAll("[btn-count]");
+const printCount = document.querySelector("[click-amount]");
+const btnOnePrint = document.querySelector("[btn-one-print]");
+const btnTwoPrint = document.querySelector("[btn-two-print]");
+const btnThreePrint = document.querySelector("[btn-three-print]");
+
+btnsForCount.forEach((btn) =>
+  btn.addEventListener("click", (e) => {
+    countTotal++;
+    printCount.innerHTML = countTotal;
+
+    btn.dataset.btnVal == "1"
+      ? btnOne++
+      : btn.dataset.btnVal == "2"
+      ? btnTwo++
+      : btn.dataset.btnVal == "3"
+      ? btnThree++
+      : null;
+
+    btnOnePrint.innerHTML = btnOne;
+    btnTwoPrint.innerHTML = btnTwo;
+    btnThreePrint.innerHTML = btnThree;
+  })
+);
+
+/*
+To access custom attributes using dataset, the attribute name in the HTML must start with 'data-'
+*/
+
+
