@@ -90,4 +90,12 @@ btnsForCount.forEach((btn) =>
 To access custom attributes using dataset, the attribute name in the HTML must start with 'data-'
 */
 
+// *******************************************************************//
+// DOM Traversal
 
+const grandParent = document.querySelector("#grand-parent");
+console.log(grandParent.children);
+
+for (i = 0; i < grandParent.children.length; i++) {
+  console.log(grandParent.children[i]);
+}
