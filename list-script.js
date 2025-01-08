@@ -1,14 +1,11 @@
 const form = document.getElementById("new-item-form");
 const input = document.getElementById("item-input");
 const listDiv = document.getElementById("list");
-
-const pTag = document.createElement("p");
-const listItem = document.querySelector(".list-item");
-
 const listArray = [];
 
 const printArray = (array) => {
-  listDiv.innerHTML = ""; // Clear previous list items before re-rendering
+  listDiv.innerHTML = ""; // Clear previous list items in the div before re-rendering
+  const pTag = document.createElement("p");
   array.forEach((item, index) => {
     const pTag = document.createElement("p"); // Create a new <p> for each item
     pTag.className = "list-item";
