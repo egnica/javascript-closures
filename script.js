@@ -16,3 +16,8 @@ arrayLength == ""
   : arrayLength < 10
   ? console.log("medium")
   : console.log("large");
+
+for (let x = 0; x < 11; x++) {
+  if (x == 5) break;
+  console.log(x);
+}
