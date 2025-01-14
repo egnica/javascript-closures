@@ -19,5 +19,10 @@ arrayLength == ""
 
 for (let x = 0; x < 11; x++) {
   if (x == 5) break;
-  console.log(x);
+  console.log(`x:${x}`);
+}
+let i = 0;
+while (i < 10) {
+  console.log(`i:${i}`);
+  i++;
 }
