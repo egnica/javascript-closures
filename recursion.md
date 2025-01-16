@@ -6,7 +6,7 @@ Any situation where you do something, and depending on the results, you might do
 
 ## Has 2 parts
 
-1. Base Case - stopping condition
+1. Base Case - stopping condition to exit
 2. The recursive call to that function
 
 ## Why you might use a recursive function over an iterator
